@@ -1,21 +1,21 @@
-# TÍTULO DO PROJETO
+# Aluguel de Carro
 
-`CURSO`
+`Engenharia de Software`
 
-`DISCIPLINA`
+`Laboratorio de projeto de software`
 
-`SEMESTRE`
+`Primeiro semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+
 
 ## Integrantes
 
-- Obi-Wan Kenobi 
-- Anakin Skywalker
+- Túlio Bolognani 
+- Vitor Marcondes
 
 ## Professor
 
-- Mestre Yoda
+- Jose Laerte
 
 # Documentação
 
