@@ -1,5 +1,7 @@
 package classes;
 
+import bd.AluguelApplication;
+
 public class Agente extends Usuario{
 	
 	private int numPedido;
@@ -22,6 +24,11 @@ public class Agente extends Usuario{
 				+ getNome() + "]";
 	}
 	
-	
+	//novo Agente
+	public static void addAgente(Pedido p, String emp_Banco) {
+		AluguelApplication.jdbc.update("INSERT INTO AGENTE (NUM_PEDIDO, EMP_BANCO)"
+				+ " VALUES (?, ?);",
+				p.getId(), emp_Banco);
+	}
 
 }

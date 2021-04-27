@@ -26,7 +26,15 @@ public class Rendimento {
 	public String toString() {
 		return "Rendimento [id=" + id + ", rAtual=" + rAtual + ", RMAX=" + RMAX + "]";
 	}
+	public Rendimento(int id, int rAtual) {
+		super();
+		this.id = id;
+		this.rAtual = rAtual;
+	}
 	
-	
+	//novo rendimento
+	public static Rendimento addRendimento(int id, int rAtual) {
+		return new Rendimento(id, rAtual);
+	}
 
 }

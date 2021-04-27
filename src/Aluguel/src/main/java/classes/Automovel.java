@@ -1,5 +1,7 @@
 package classes;
 
+import bd.AluguelApplication;
+
 public class Automovel {
 	
 	private int matricula;
@@ -41,6 +43,22 @@ public class Automovel {
 	public String toString() {
 		return "Automovel [matricula=" + matricula + ", placa=" + placa + ", marca=" + marca + ", modelo=" + modelo
 				+ ", ano=" + ano + "]";
+	}
+	
+	
+	public Automovel(int matricula, String placa, String marca, String modelo, int ano) {
+		super();
+		this.matricula = matricula;
+		this.placa = placa;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.ano = ano;
+	}
+	
+	//novo automovel
+	public static void addAutomovel(int matricula, String placa, String marca, String modelo, int ano) {
+		AluguelApplication.jdbc.update("INSERT INTO AUTOMOVEL (MATRICULA, PLACA, MARCA, MODELO, ANO)"
+				+ "VALUES (?,?,?,?,?)", matricula, placa, marca, modelo, ano);
 	}
 	
 	

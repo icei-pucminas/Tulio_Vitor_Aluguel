@@ -1,5 +1,7 @@
 package classes;
 
+import bd.AluguelApplication;
+
 public class Cliente extends Usuario{
 
 	private double rendimento;
@@ -51,6 +53,16 @@ public class Cliente extends Usuario{
 		return "Cliente [rendimento=" + rendimento + ", endereco=" + endereco + ", cpf=" + cpf + ", rg=" + rg
 				+ ", profissao=" + profissao + ", entEmp=" + entEmp + ", getId()=" + getId() + ", getNome()="
 				+ getNome() + "]";
+	}
+	
+	//Cria cliente
+	public static void addCliente( int ID_USUARIO, double RENDIMENTO, String ENDERENCO, int CPF, 
+			int RG, String PROFISSAO, String ENTIDADE_EMP) {
+		
+		AluguelApplication.jdbc.update("INSERT INTO CLIENTE (ID_USUARIO,RENDIMENTO, ENDERENCO, CPF, "
+				+ "RG, PROFISSAO, ENTIDADE_EMP"
+				+ " VALUES (?, ?, ?, ?, ?, ?, ?);",
+				ID_USUARIO,RENDIMENTO, ENDERENCO, CPF, RG, PROFISSAO, ENTIDADE_EMP);
 	}
 	
 	

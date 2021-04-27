@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http:www.w3.org/1999/xhtml"
+       xmlns:th="www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+<title>Novo Pedido</title>
+</head>
+<body>
+<div align="center">
+    
+    </br>
+    
+    <form action="#" th:action="@{/save}" th:object="${pedido}" method="post">
+      
+    <table border="1" cellpadding="10">
+     <tr>
+         <td>Nome</td>
+         <td><input type="text" th:field="*{nome}"></td>
+     </tr>
+     
+       <tr>
+         <td>Descricao</td>
+         <td><input type="text" th:field="*{descricao}"></td>
+     </tr>
+     
+       <tr>
+         <td>Id Usuario</td>
+         <td><input type="text" th:field="*{idUsuario}"></td>
+     </tr>
+     
+       <tr>
+         <td>Matricula Automovel</td>
+         <td><input type="text" th:field="*{matriculaAutomovel}"></td>
+     </tr>
+     
+      <tr>
+         
+         <td colspan="2"><button type="submit" >Salvar</button></td>
+     </tr>
+     
+   
+    </table>
+    
+    </form>
+    
+    
+
+
+</div>
+
+</body>
+</html>

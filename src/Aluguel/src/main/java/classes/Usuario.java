@@ -1,5 +1,7 @@
 package classes;
 
+import bd.AluguelApplication;
+
 public class Usuario {
 	
 	private int id;
@@ -23,6 +25,10 @@ public class Usuario {
 		return "Usuario [id=" + id + ", nome=" + nome + "]";
 	}
 	
-	
+	//Cria usuario
+	public static void  addUsuario(String nome) {
+		AluguelApplication.jdbc.update("INSERT INTO USUARIO (NOME) VALUES (?);",
+				nome);
+	}
 
 }

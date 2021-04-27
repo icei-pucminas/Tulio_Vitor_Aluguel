@@ -8,6 +8,8 @@ class AluguelApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
+		
 	}
 
 }

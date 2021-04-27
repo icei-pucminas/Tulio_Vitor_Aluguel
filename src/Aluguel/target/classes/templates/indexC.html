@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http:www.w3.org/1999/xhtml"
+       xmlns:th="www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+<title>Pedido aplicacao</title>
+</head>
+<body>
+<div align="center">
+    <h1> Lista de Contratos</h1>
+    <a href="/newC">Registrar novo Contrato </a>\
+    </br>
+
+    
+    <table border="1" cellpadding="10">
+    
+    <thead>
+    <tr>
+      <th> ID Contrato</th>
+      <th> Tipo de contrato </th>
+      <th> Id pedido </th>
+      <th> ID Credidto </th>
+      
+     </tr> 
+     </thead>
+    
+    <tbody>
+      <tr th:each="contrato : ${listcontrato}">
+         <td th:text="${contrato.id}">ID</td>
+         <td th:text="${contrato.tipoContrato}">Tipo de contrato</td>
+         <td th:text="${contrato.idPedido}">Id pedido</td>
+         <td th:text="${contrato.idCredito}">ID Credito</td>
+     
+      </tr>
+    </tbody>
+    
+    </table>
+
+
+</div>
+
+</body>
+</html>
